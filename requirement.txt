@@ -1,0 +1,10 @@
+colorama
+time
+os
+ctypes
+pickle
+requests
+sys
+base64
+string
+re
