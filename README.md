@@ -1,4 +1,5 @@
 # FuckAV
+[![Travis](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.2-red)](1)  [![Travis](https://img.shields.io/badge/Time-9--13-brightgreen)](1)
 农民工写的免杀工具，2021-8-20
  1frame  1046141213@qq.com
 ## 更新记录
