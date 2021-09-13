@@ -49,6 +49,8 @@ def fix_string(bianliang):
     a=[]
     if times>changdu:
         print('\033[1;31;40m'"[*] ▇▇▇▇▇▇▇▇▇▇▇ [*]  加密次数太多了，最大值为:"+str(changdu)+"!!!")
+        print('\033[1;31;40m'"[*] ▇▇▇▇▇▇▇▇▇▇▇ [*]  请删除shell.exe后重新编译")
+
     else:
         for cishu in range(0,times,1):
             st=Remove_str(danci)[n]

