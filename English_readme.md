@@ -4,8 +4,11 @@
 [![Travis](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.2-red)](1)  [![Travis](https://img.shields.io/badge/Time-9--13-brightgreen)](1)  [![Travis](https://img.shields.io/badge/python-3.6-brightgreen)](1)
 ## Instructions
  python fuckav.py
+ 
  input number：1
+ 
  input shellcode (Example：\xfc\x48\.......\x56\x78)
+ 
  input number
 ## Record
 - As of  2021-8-20，bypass：360、HipsTray、McAfee、Windows denfend、Kaspersky、Symantec  VT(10/67)
