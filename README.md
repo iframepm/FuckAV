@@ -1,5 +1,5 @@
 # FuckAV
-## [中文](https://github.com/iframepm/FuckAV/main/README.md) [English](https://github.com/iframepm/FuckAV/blob/main/English_readme.md)
+## [中文](https://github.com/iframepm/FuckAV/blob/main/README.md) [English](https://github.com/iframepm/FuckAV/blob/main/English_readme.md)
 
 [![Travis](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.2-red)](1)  [![Travis](https://img.shields.io/badge/Time-9--13-brightgreen)](1)  [![Travis](https://img.shields.io/badge/python-3.6-brightgreen)](1)
 
@@ -38,5 +38,6 @@
 - 截止到 2021-9-13，360、火绒、Windows denfend、静态全过，无法过360动态查杀（约一分钟之后就会报毒，可以再查杀之前选择进程注入。）
 - 截止到 2021-9-23，360、火绒、Windows denfend、卡巴动静态全过，更新了一下改了改规则，又能过了....不愧是md5查杀器
 
+![image](https://s3.bmp.ovh/imgs/2021/09/44082aac1e090b1d.png)
 ![image](https://z3.ax1x.com/2021/08/20/fO7itK.jpg)
 ![image](https://z3.ax1x.com/2021/08/20/fOqMA1.png)
