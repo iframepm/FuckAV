@@ -36,7 +36,8 @@
 - 截止到 2021-8-20，360、火绒、Windows denfend、卡巴静态全过
 - 截止到 2021-8-28，360、火绒、Windows denfend、卡巴静态全过  2021-8-28更新
 - 截止到 2021-9-13，360、火绒、Windows denfend、静态全过，无法过360动态查杀（约一分钟之后就会报毒，可以再查杀之前选择进程注入。）
-- 截止到 2021-9-23，360、火绒、Windows denfend、卡巴动静态全过，更新了一下改了改规则，又能过了....不愧是md5查杀器
+- 截止到 2021-9-23，360、火绒动静态全过 Windows denfend、卡巴静态全过，更新了一下改了改规则，又能过了....不愧是md5查杀器
+- 截止到 2021-9-26，360、火绒动静态全过 Windows denfend、卡巴静态全过，Windows denfend、卡巴 动态杀
 
 ![image](https://s3.bmp.ovh/imgs/2021/09/44082aac1e090b1d.png)
 ![image](https://z3.ax1x.com/2021/08/20/fO7itK.jpg)
