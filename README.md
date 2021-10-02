@@ -19,7 +19,7 @@
 ##  温馨提示
 > 使用之前安装一下python库 pip install -r requirement.txt，出现啥依赖库报错，大家自己解决吧，因为这个每个人的环境不一样，解决个依赖库报错相信不是啥难题
 
-- 脚本采用python3.7编写
+- 脚本采用python3.7编写,Windows环境！！！！！！
 
 - 采用pyinstaller打包，使用之前请安装pyinstaller
 
