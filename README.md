@@ -44,6 +44,6 @@
 ### VT查杀率：
 ![image](https://s3.bmp.ovh/imgs/2021/09/44082aac1e090b1d.png)
 ### exe：
-![image](https://z3.ax1x.com/2021/10/25/54473F.gif)
+![image](https://z3.ax1x.com/2021/10/25/54odB9.gif)
 ### powershell：
 ![image](https://z3.ax1x.com/2021/10/25/544WBn.gif)
