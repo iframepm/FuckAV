@@ -41,7 +41,9 @@
 - 截止到 2021-9-23，360、火绒动静态全过 Windows denfend、卡巴静态全过，更新了一下改了改规则，又能过了....不愧是md5查杀器
 - 截止到 2021-9-26，360、火绒动静态全过 Windows denfend、卡巴静态全过，Windows denfend、卡巴 动态杀
 - 截止到 2021-10-25，360、火绒动静态全过，卡巴，Windows denfend过不了（没有WD环境，懒得测）
-
+### VT查杀率：
 ![image](https://s3.bmp.ovh/imgs/2021/09/44082aac1e090b1d.png)
-![image](https://z3.ax1x.com/2021/08/20/fO7itK.jpg)
-![image](https://z3.ax1x.com/2021/08/20/fOqMA1.png)
+### exe：
+![image](https://github.com/iframepm/FuckAV/blob/main/upx/GIF 2021-10-25 18-00-14.gif)
+### powershell：
+![image](https://github.com/iframepm/FuckAV/blob/main/upx/powershell.gif)
