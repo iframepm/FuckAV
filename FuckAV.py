@@ -4,6 +4,7 @@ from colorama import init,Fore,Back,Style
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+import powershell
 import random
 
 
@@ -24,8 +25,8 @@ print(f"""
 ║    █████╗      ██║   ██║    ██║         █████╔╝     ███████║██║   ██║      ║
 ║    ██╔══╝      ██║   ██║    ██║         ██╔═██╗     ██╔══██║╚██╗ ██╔╝      ║
 ║    ██║         ╚██████╔╝    ╚██████╗    ██║  ██╗    ██║  ██║ ╚████╔╝       ║
-║    ╚═╝          ╚═════╝      ╚═════╝    ╚═╝  ╚═╝    ╚═╝  ╚═╝  ╚═══╝ V1.3   ║
-║  Author:1frame                                             Time:2021-9-23  ║
+║    ╚═╝          ╚═════╝      ╚═════╝    ╚═╝  ╚═╝    ╚═╝  ╚═╝  ╚═══╝ V2.0   ║
+║  Author:1frame                                             Time:2021-10-25 ║
 ╚============================================================================╝
 """)
 print('\033[1;31;40m''[*]''\033[1;37;40m'" exp: python FuckAV.py")
@@ -36,8 +37,8 @@ print('\033[1;33;40m''[*]''\033[1;37;40m'" 安装依赖库: pip install -r requi
 print()
 print("====================================================================")
 print()
-print('\033[1;31;40m''[1]''\033[1;37;40m'": Output exe")
-print('\033[1;31;40m''[2]''\033[1;37;40m'": Output powershell.ps1（暂未开发）")
+print('\033[1;31;40m''[1]''\033[1;37;40m'": 生成 exe")
+print('\033[1;31;40m''[2]''\033[1;37;40m'": 生成 powershell脚本")
 xz=input(f"""
 [♥] 选择 1/2: """)
 
@@ -94,4 +95,5 @@ if xz=="1":
         print('\033[1;34;40m''[*]''\033[1;37;40m'" exe路径:\dist\{0}.exe".format(shellname))
         os.system("pause")
         os.system("python fuckav.py")
-
+elif xz=="2":
+    powershell.powershell_fix()
