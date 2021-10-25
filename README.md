@@ -44,6 +44,6 @@
 ### VT查杀率：
 ![image](https://s3.bmp.ovh/imgs/2021/09/44082aac1e090b1d.png)
 ### exe：
-![image](https://github.com/iframepm/FuckAV/blob/main/upx/GIF 2021-10-25 18-00-14.gif)
+![image](https://github.com/iframepm/FuckAV/blob/main/upx/GIF%202021-10-25%2018-00-14.gif)
 ### powershell：
 ![image](https://github.com/iframepm/FuckAV/blob/main/upx/powershell.gif)
