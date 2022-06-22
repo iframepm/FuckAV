@@ -1,5 +1,6 @@
 # FuckAV
-## 项目倒闭，停止维护！
+### 项目倒闭，停止维护！
+### powershell免杀还能用，exe稍微改一下还能过
 ## [中文](https://github.com/iframepm/FuckAV/blob/main/README.md) [English](https://github.com/iframepm/FuckAV/blob/main/English_readme.md)
 
 [![Travis](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.2-red)](1)  [![Travis](https://img.shields.io/badge/Time-9--13-brightgreen)](1)  [![Travis](https://img.shields.io/badge/python-3.6-brightgreen)](1)
