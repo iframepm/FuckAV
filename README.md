@@ -1,4 +1,5 @@
 # FuckAV
+## 项目倒闭，停止维护！
 ## [中文](https://github.com/iframepm/FuckAV/blob/main/README.md) [English](https://github.com/iframepm/FuckAV/blob/main/English_readme.md)
 
 [![Travis](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.2-red)](1)  [![Travis](https://img.shields.io/badge/Time-9--13-brightgreen)](1)  [![Travis](https://img.shields.io/badge/python-3.6-brightgreen)](1)
@@ -41,6 +42,7 @@
 - 截止到 2021-9-23，360、火绒动静态全过 Windows denfend、卡巴静态全过，更新了一下改了改规则，又能过了....不愧是md5查杀器
 - 截止到 2021-9-26，360、火绒动静态全过 Windows denfend、卡巴静态全过，Windows denfend、卡巴 动态杀
 - 截止到 2021-10-25，360、火绒动静态全过，卡巴，Windows denfend过不了（没有WD环境，懒得测）
+- 截止到 2022-6-22，停止更新了，我太懒了，本身不是做免杀的，而且涉及的技术栈太过于基础，没有维护下去的必要，后续可能会开发其他的免杀或者写点文章
 ### VT查杀率：
 ![image](https://s3.bmp.ovh/imgs/2021/09/44082aac1e090b1d.png)
 ### exe：
