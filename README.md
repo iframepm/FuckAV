@@ -6,7 +6,6 @@
 [![Travis](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.2-red)](1)  [![Travis](https://img.shields.io/badge/Time-9--13-brightgreen)](1)  [![Travis](https://img.shields.io/badge/python-3.6-brightgreen)](1)
 
 农民工写的免杀工具，2021-9-13
- 1frame  1046141213@qq.com
 ## 更新记录
 ### 时间 2021-9-13 版本：1.2
 1. shellcode加载方式由远程加载改为了本地加载，shellcode写死在了exe里面，因为远程加载太麻烦，点开直接上线更方便，现在直接运行shell.exe就能上线
